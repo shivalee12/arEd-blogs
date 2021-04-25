@@ -1,1 +1,1 @@
-web: gunicorn arEd-blogs.wsgi --log-file=- onbytes.wsgi:ared
+web: gunicorn arEd.wsgi --log-file -
