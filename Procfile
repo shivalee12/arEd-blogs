@@ -1,1 +1,1 @@
-web: gunicorn arEd.wsgi --log-file -
+web: gunicorn arEd.wsgi --log-file - --log-level debug
