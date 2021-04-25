@@ -1,1 +1,1 @@
-web: gunicorn arEd.wsgi --log-file - --log-level debug
+web: gunicorn arEd.wsgi --log-file=- onbytes.wsgi:application
