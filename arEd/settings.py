@@ -29,7 +29,8 @@ SECRET_KEY = 'tic-ip=$)wmgs4fygw=7i--by8$m*$$31xqq62vdbwt*s8()rk'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+'ared-blogs.herokuapp.com']
 
 
 # Application definition
