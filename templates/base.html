@@ -2,7 +2,6 @@
 
 {% load socialaccount %}
 {% load auth_extras %}
-
 <!doctype html>
 <html lang="en">
 
@@ -38,29 +37,27 @@
                             <i class="fas fa-sun"></i>
                             <div class="ball"></div>
                         </label></li></a>
-                    <a><li><i class="fa fa-user-o"   ></i></li></a>
-			
-			<div class="dropdown" style="float:right;">
+                    <div class="dropdown" style="float:right;">
                     
-                    	{% if user.is_authenticated %}
-                        	<a><li><i class="fa fa-user-o"></i></li>  {{ user.username }}</a>
-                        	<div class="dropdown-content" style="float:left">
-                            	{% if request.user|has_group:"author" %}
-                            	<a href="{% url 'add_blog' %}">Add Blog</a>
-                            	{% endif %}
-                            	<a href="/logout">Sign Out</a>
-                   	 {% else %}
-                        	<a href="{% provider_login_url 'google' %}" >Sign In</a>
+                    {% if user.is_authenticated %}
+                        <a><li><i class="fa fa-user-o"></i></li>  {{ user.username }}</a>
+                        <div class="dropdown-content" style="float:left">
+                            {% if request.user|has_group:"author" %}
+                            <a href="{% url 'add_blog' %}">Add Blog</a>
+                            {% endif %}
+                            <a href="/logout">Sign Out</a>
+                    {% else %}
+                        <a href="{% provider_login_url 'google' %}" >Sign In</a>
                         
-                    	{% endif %}
-                    		</div>
-                    	</div>
+                    {% endif %}
+                    </div>
+                    </div>
                 </ul>
 
                 
             </div>
         </div>
-    <br />
+    <br/>
     
     <div class="container">
         {% block content %}
@@ -68,7 +65,7 @@
         {% endblock %}
     </div>
     
-    <div class="test" style="height: 500px;"></div>
+    <div class="test" style="height: 200px;"></div>
     
     
     
