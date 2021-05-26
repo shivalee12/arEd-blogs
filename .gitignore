@@ -143,5 +143,4 @@ dmypy.json
 .vscode/*
 !.vscode/settings.json 
 
-# My Files#
-*.bat
+
