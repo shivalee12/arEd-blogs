@@ -86,8 +86,7 @@
 
 {% endif %}
 {% else %}
-<a class="btn btn-outline-info" href="{% url 'home' %}">Log in to like this
-    article!</a><br>
+<h5>Sign in to like this article!</h5><br>
 <strong class="text-secondary"> {{ blog.number_of_likes }} Like{{ blog.number_of_likes|pluralize }}</strong>
 {% endif %}
 
