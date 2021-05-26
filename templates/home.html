@@ -15,11 +15,7 @@
   <br/>
   <br/>
   <br/>
-  <!-- checks if user is authenticated -->
-  {% if user.is_authenticated %}
   <h1>BLOGS</h1>
-  <br/>
-  <h4>Welcome, {{ user.username }} !</h4>
 
   <ul>
     <br />
@@ -41,12 +37,7 @@
 
       {% endfor %}
   </ul>
-  
-  {% else %}
-  
 
-  <h3>Sign In to Get Started!</h3>
-  {% endif %}
 </body>
 
 </html>
