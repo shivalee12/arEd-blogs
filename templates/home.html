@@ -27,6 +27,8 @@
             <h5 class="card-title">{{ blog.title }} - {{ blog.author }}</h5>
             <p class="card-text">{{ blog.short_description }}</p>
             <a href="{% url 'blog-detail' blog.slug %}" class="btn btn-primary">Read More</a>
+            <small style="padding-left: 180px;">{{ blog.published_date }} -
+              {{blog.blog_readtime}} min{{ blog.blog_readtime|pluralize }} read</small>
           </div>
         </div>
       </div>
