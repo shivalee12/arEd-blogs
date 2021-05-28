@@ -40,14 +40,17 @@
                     <div class="dropdown" style="float:right;">
                     
                     {% if user.is_authenticated %}
+                        <button class="dropbtn" style="padding-top: 28px;">
                         <a><li><i class="fa fa-user-o"></i></li>  {{ user.username }}</a>
-                        <div class="dropdown-content" style="float:left">
+                        </button>
+                        <div class="dropdown-content">
+                            <h5 style="color:black;text-align: center">Hey&nbsp;{{ user.first_name }}!</h5>
                             {% if request.user|has_group:"author" %}
                             <a href="{% url 'add_blog' %}">Add Blog</a>
                             {% endif %}
                             <a href="/logout">Sign Out</a>
                     {% else %}
-                        <a href="{% provider_login_url 'google' %}" >Sign In</a>
+                        <a href="{% provider_login_url 'google' %}" style="padding-top: 28px;">Sign In</a>
                         
                     {% endif %}
                     </div>
@@ -77,8 +80,8 @@
             </div>
             <div class="information">Follow us on
                 <div>    
-                    <a><i class="fa fa-twitter" aria-hidden="true" style="color: white"> Twitter</i></a>
-                    <a href="https://www.linkedin.com/company/aredin/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true" style="color: white "> Linkedin</i></a>
+                    <a href="https://twitter.com/arEdHQ?s=08" target="_blank"><i class="fa fa-twitter" aria-hidden="true" style="color: white"> </i></a>
+                    <a href="https://www.linkedin.com/company/aredin/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true" style="color: white "> </i></a>
                 </div>   
                 
             </div>
