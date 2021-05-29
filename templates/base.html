@@ -21,6 +21,7 @@
    <link rel="stylesheet" type="text/css" href="{% static 'Css/Style.css' %}">
 
     <title>arEd</title>
+</head>
 
 <body>
     
@@ -41,7 +42,7 @@
                     
                     {% if user.is_authenticated %}
                         <button class="dropbtn" style="padding-top: 28px;">
-                        <a><li><i class="fa fa-user-o"></i></li>  {{ user.username }}</a>
+                        <a><li><i class="fa fa-user-o"></i></li></a>
                         </button>
                         <div class="dropdown-content">
                             <h5 style="color:black;text-align: center">Hey&nbsp;{{ user.first_name }}!</h5>
@@ -87,10 +88,7 @@
             </div>
         </div>
     </div>
-</body>
-</head>    
-
-
+</body>    
 
 
     <script>
